@@ -9,102 +9,185 @@
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #f5f2eb; /* Color Crema de fondo principal */
+            color: #2e3626; /* Texto verde militar muy oscuro para legibilidad */
             line-height: 1.6;
+            min-height: 100vh;
         }
+
+        /* Decoración de Notas Musicales fija a la derecha */
+        .music-decor {
+            position: fixed;
+            right: 8%;
+            top: 20%;
+            bottom: 10%;
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 4.5rem;
+            color: rgba(122, 141, 107, 0.25); /* Verde militar claro con opacidad sutil */
+            pointer-events: none;
+            user-select: none;
+            z-index: 1;
+        }
+
+        /* Cabecera alineada a la izquierda */
         header {
-            background-color: #1a252f;
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
+            background-color: #7a8d6b; /* Verde Militar Claro */
+            color: #f5f2eb; /* Texto color crema claro */
+            text-align: left;
+            padding: 4rem 1rem 3.5rem 10%; /* Margen generoso a la izquierda */
+            border-bottom: 5px solid #637356;
+        }
+        
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f5f2eb;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         header p {
-            font-size: 1.2rem;
-            color: #1abc9c;
-            margin-top: 0.5rem;
+            font-size: 1.15rem;
+            color: #e2dac5; /* Crema suave para el subtítulo */
+            margin: 0.5rem 0 0 0;
+            font-weight: 500;
         }
+
+        /* Contenedor cargado a la izquierda */
         .container {
-            max-width: 800px;
-            margin: -2rem auto 2rem auto;
-            padding: 0 1rem;
+            max-width: 650px; /* Reducido para dar espacio al diseño derecho */
+            margin: -2rem auto 3rem 10%; /* Desplazado firmemente a la izquierda */
+            padding: 0 1.2rem;
+            position: relative;
+            z-index: 2; /* Por encima de las notas musicales de fondo */
         }
+
         .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            background: #faf8f4; /* Crema muy claro y limpio para las tarjetas */
+            padding: 2.2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-bottom: 1.8rem;
+            border: 1px solid #e3dec3;
         }
         h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #1abc9c;
-            padding-bottom: 0.5rem;
+            color: #4f5d43; /* Verde militar medio */
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #7a8d6b;
+            padding-bottom: 0.4rem;
             display: inline-block;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #3d4733;
         }
         ul {
             padding-left: 1.2rem;
+            margin: 0;
         }
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            color: #3d4733;
         }
-        .contact-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .contact-links a {
-            text-decoration: none;
-            color: white;
-            background-color: #2c3e50;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .contact-links a:hover {
-            background-color: #1abc9c;
-        }
-
-        /* DISEÑO CREATIVO DE CURSOS */
+        
+        /* Cuadrícula Dinámica de Cursos con acentos verde militar */
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }
         .course-item {
-            background-color: #fdfdfd;
-            border-left: 4px solid #1abc9c;
+            background-color: #fcfbfa;
+            border-left: 4px solid #7a8d6b;
             padding: 1rem;
             border-radius: 6px;
             font-weight: 500;
-            color: #2c3e50;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            color: #2e3626;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            border-top: 1px solid #e3dec3;
+            border-right: 1px solid #e3dec3;
+            border-bottom: 1px solid #e3dec3;
         }
         .course-item:hover {
-            transform: translateY(-3px);
-            background-color: #f1fcf9;
-            box-shadow: 0 4px 8px rgba(26, 188, 156, 0.1);
+            transform: translateY(-2px);
+            background-color: #f3f0e6;
+            box-shadow: 0 6px 12px rgba(122, 141, 107, 0.15);
         }
-        /* El curso largo ocupa dos columnas si hay espacio */
         .course-full {
             grid-column: 1 / -1;
+        }
+        
+        /* Botones de contacto de amigos y tuyos */
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            text-decoration: none;
+            color: #f5f2eb;
+            background-color: #4f5d43;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .contact-links a:hover {
+            background-color: #7a8d6b;
+            transform: translateY(-1px);
+        }
+
+        /* Adaptación para pantallas pequeñas (Celulares) */
+        @media (max-width: 850px) {
+            .container {
+                margin: -2rem auto 3rem auto;
+                max-width: 100%;
+            }
+            header {
+                text-align: center;
+                padding-left: 1rem;
+            }
+            .music-decor {
+                display: none; /* Ocultar notas en celular para no saturar la pantalla */
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Notas musicales de fondo flotando a la derecha -->
+    <div class="music-decor">
+        <span>🎶</span>
+        <span>🎵</span>
+        <span>🎼</span>
+        <span>♪</span>
+    </div>
+
     <header>
-        <h1>Rodrigo Gonzalo Chipana Pariona</h1>
+        <img src="https://github.com/Rodrig217.png" alt="Rodrigo Gonzalo Chipana Pariona" class="profile-img">
+        <h1>Rodrigo Gonzalo, Chipana Pariona</h1>
         <p>Estudiante de Ingeniería en Inteligencia Artificial | UNMSM</p>
     </header>
 
     <div class="container">
+        
         <!-- Sobre Mí -->
         <div class="card">
             <h2>Sobre Mí</h2>
@@ -121,7 +204,7 @@
             </ul>
         </div>
 
-        <!-- SECCIÓN: Cursos (Diseño Adaptativo y Creativo) -->
+        <!-- Cursos Actuales -->
         <div class="card">
             <h2>Cursos en Curso</h2>
             <div class="courses-grid">
@@ -145,6 +228,17 @@
             </ul>
         </div>
 
+        <!-- SECCIÓN RESERVADA: Páginas de Amigos -->
+        <div class="card">
+            <h2>Páginas de Amigos</h2>
+            <p>Aquí se añadirán próximamente los accesos directos a los portafolios de mis compañeros y amigos de la facultad:</p>
+            <div class="contact-links">
+                <!-- Aquí pegaremos los enlaces cuando me los pases, ejemplo: -->
+                <!-- <a href="ENLACE" target="_blank">Nombre de tu amigo</a> -->
+                <p style="font-style: italic; color: #7a8d6b; margin: 0;">Espacio listo para insertar los enlaces...</p>
+            </div>
+        </div>
+
         <!-- Contacto -->
         <div class="card">
             <h2>Contacto</h2>
@@ -154,6 +248,7 @@
                 <a href="https://github.com/Rodrig217" target="_blank">GitHub</a>
             </div>
         </div>
+        
     </div>
 
 </body>
