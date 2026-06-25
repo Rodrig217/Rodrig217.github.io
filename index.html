@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Rodrigo</title>
+    <title>Portafolio | Rodrigo Gonzalo Chipana Pariona</title>
     <style>
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -68,12 +68,39 @@
         .contact-links a:hover {
             background-color: #1abc9c;
         }
+
+        /* DISEÑO CREATIVO DE CURSOS */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .course-item {
+            background-color: #fdfdfd;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #2c3e50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+        }
+        .course-item:hover {
+            transform: translateY(-3px);
+            background-color: #f1fcf9;
+            box-shadow: 0 4px 8px rgba(26, 188, 156, 0.1);
+        }
+        /* El curso largo ocupa dos columnas si hay espacio */
+        .course-full {
+            grid-column: 1 / -1;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Rodrigo</h1>
+        <h1>Rodrigo Gonzalo Chipana Pariona</h1>
         <p>Estudiante de Ingeniería en Inteligencia Artificial | UNMSM</p>
     </header>
 
@@ -91,16 +118,28 @@
                 <li>Lógica formal y estructuras algorítmicas.</li>
                 <li>Optimización de sistemas complejos.</li>
                 <li>Modelado y fundamentos de Inteligencia Artificial.</li>
-                <li>Análisis técnico de hardware.</li>
             </ul>
         </div>
 
-        <!-- NUEVA SECCIÓN: Pasatiempos -->
+        <!-- SECCIÓN: Cursos (Diseño Adaptativo y Creativo) -->
+        <div class="card">
+            <h2>Cursos en Curso</h2>
+            <div class="courses-grid">
+                <div class="course-item">Cálculo</div>
+                <div class="course-item">Introducción a Ciencias de la Computación</div>
+                <div class="course-item">Desarrollo personal y Liderazgo</div>
+                <div class="course-item">Métodos de Estudio Universitarios</div>
+                <div class="course-item">Álgebra y Geometría Analítica</div>
+                <div class="course-item">Redacción</div>
+                <div class="course-item course-full">Medio Ambiente y Desarrollo Sostenible</div>
+            </div>
+        </div>
+
+        <!-- Pasatiempos -->
         <div class="card">
             <h2>Pasatiempos y Proyectos Personales</h2>
             <ul>
                 <li><strong>Minecraft Técnico y Redstone:</strong> Análisis de mecánicas internas del juego, lógica computacional basada en Redstone y optimización de rendimiento en servidores.</li>
-                <li><strong>Hardware y Fidelidad de Audio:</strong> Exploración técnica de componentes electrónicos, DACs de alta fidelidad en dispositivos móviles y diagnóstico de estabilidad en hardware.</li>
                 <li><strong>Matemáticas Fundacionales:</strong> Resolución autónoma de problemas de lógica proposicional, teoría de conjuntos y demostraciones matemáticas formales fuera de las aulas.</li>
                 <li><strong>Música y Aprendizaje:</strong> Interés por la cultura musical, el coleccionismo digital, la historia de géneros locales y el aprendizaje autónomo de instrumentos acústicos como el ukelele.</li>
             </ul>
